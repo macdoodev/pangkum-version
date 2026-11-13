@@ -1,0 +1,33 @@
+{
+  "version": "41",
+  "date": "2026-11-13",
+  "notes": "v41: เมนูตรวจความพร้อม · แสดงข้อความจริงของ Google · ลดเวอร์ชันสำรองซ้ำ + เตือนเวอร์ชันใกล้เต็ม · แยก Updater.gs",
+  "link": "https://example.com/วิธีอัปเดต",
+  "files": [
+    {
+      "path": "src/Code.gs",
+      "sha256": "046891fa2bbb7e2ed7b99a777598a4df05e08e57b59f76892aee6a284d2aeb2e"
+    },
+    {
+      "path": "src/ClientCode.gs",
+      "sha256": "0d380fc8f76c6e139ab7dffb668b20bd1d1aca21c42c55fbaf9901a426b0ea12"
+    },
+    {
+      "path": "src/Index.html",
+      "sha256": "b976eb27563624e7a66dd12b2e96a880d7644b9b5ba7c25288ded342c9abd070"
+    },
+    {
+      "path": "src/Menu.gs",
+      "sha256": "b5db39af60ad18873904e3517d43c8b39a418ecf87b2a1a93dbbc3a07f4dfc3a"
+    },
+    {
+      "path": "src/Updater.gs",
+      "sha256": "a685b487ead84161e8d98b728051319d86572963326a086c4a0c35bef3ce2df5"
+    },
+    {
+      "path": "src/Backup.gs",
+      "sha256": "be2e8d56ece1793d32a2321fee7536e403666cdd2cfc5c986af073e33bf211a3",
+      "seed": true
+    }
+  ]
+}

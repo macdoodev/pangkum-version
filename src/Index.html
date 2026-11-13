@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html><head><base target="_top"><meta charset="utf-8">
+<style>
+:root{--bg:#fff;--fg:#1f2430;--mut:#6b7280;--pri:#e8590c;--bd:#e5e7eb;--card:#f8f9fb}
+@media(prefers-color-scheme:dark){:root{--bg:#15171c;--fg:#eceff4;--mut:#9aa3b2;--bd:#2c313c;--card:#1d2027}}
+*{box-sizing:border-box}body{margin:0;padding-bottom:80px;font:18px/1.5 'Sarabun',system-ui,sans-serif;background:var(--bg);color:var(--fg)}
+header{padding:14px 16px 6px}h1{margin:0;font-size:28px}h2{font-size:24px}h3{margin:12px 0 4px;font-size:21px}.mut{color:var(--mut);font-size:16px}
+nav{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}nav button{flex:1;min-width:76px}nav select{flex:1;min-width:120px}.ck{width:100%;border-collapse:collapse}.ck td,.ck th{padding:8px 4px;border-bottom:1px solid var(--bd)}.ck th{color:var(--mut);font-weight:400;font-size:16px}.ck .r{text-align:right}.thumb{width:52px;height:52px;border-radius:10px;object-fit:cover;background:var(--bd);flex:none}.logo{max-height:56px;max-width:160px}.note{white-space:pre-line;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:8px 12px;margin-top:8px;font-size:17px}textarea{font:inherit;padding:10px 14px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--fg)}nav .on{background:var(--pri);color:#fff;border-color:var(--pri)}
+main,#menu{padding:6px 16px}.row{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--bd)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px;margin:8px 0}
+.card.row{padding:12px}.top{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:4px}.top b{margin-left:auto}
+.q2{font-size:34px;font-weight:700}.tag{font-size:16px;padding:2px 12px;border-radius:99px;background:var(--bd)}
+.tag.PENDING_PAY{background:#fde68a;color:#78350f}.tag.QUEUED{background:#bfdbfe;color:#1e3a8a}.tag.COOKING{background:#fed7aa;color:#7c2d12}.tag.READY{background:#bbf7d0;color:#14532d}
+.acts{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+button,input,select{font:inherit;padding:10px 14px;min-height:46px;border:1px solid var(--bd);border-radius:8px;background:var(--bg);color:var(--fg)}
+button.pri{background:var(--pri);color:#fff;border-color:var(--pri)}button:disabled{opacity:.4}
+input,select{margin:2px 0}.st{display:flex;align-items:center;gap:10px}.st button{width:48px;height:48px;padding:0;font-size:26px}.st b{min-width:30px;font-size:22px;text-align:center}
+.sold{color:#b91c1c;font-weight:700}.low{color:#b91c1c;font-weight:700}
+footer{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;font-size:19px;background:var(--bg);border-top:1px solid var(--bd)}
+.done{text-align:center;padding:40px 20px}.q{font-size:72px;font-weight:800;color:var(--pri);line-height:1.1}
+input[type=checkbox]{width:24px;height:24px;min-height:0;padding:0;vertical-align:middle}.acts{gap:8px}.acts button{min-height:50px}.row{padding:12px 0}.card{padding:14px}details summary{font-size:17px;padding:6px 0}
+.oc .top{gap:12px}.oc .q2{font-size:46px;line-height:1}.oc .top b{font-size:26px}.oc .src{font-size:19px;font-weight:600;margin-bottom:4px}.oc .its{margin:6px 0}
+.it{display:flex;justify-content:space-between;gap:12px;font-size:25px;line-height:1.35;padding:6px 0;border-bottom:1px dashed var(--bd)}.it b{font-size:27px;white-space:nowrap}
+#rc{display:none}
+@media print{
+body>*:not(#rc){display:none!important}
+#rc{display:block;width:58mm;padding:12mm 3mm 6mm;font:14px/1.5 monospace;color:#000}
+#rc .shop{text-align:center;font-weight:700;font-size:16px}
+#rc .qn{text-align:center;font-size:46px;font-weight:700;line-height:1.1;margin:4mm 0 5mm}
+@page{size:58mm auto;margin:0}
+}
+</style></head>
+<body><div id="app"><p id="ld" class="mut" style="text-align:center;padding:40px">กำลังโหลด...</p></div><div id="rc"></div>
+<script>window.__BOOT="__BOOT__";</script>
+<script>window.onerror=function(m,s,l){var e=document.getElementById('ld');if(e)e.textContent='JS error: '+m+' (บรรทัด '+l+')';};window.addEventListener('error',function(ev){var e=document.getElementById('ld');if(e)e.textContent='JS error: '+(ev.message||'')+' (บรรทัด '+(ev.lineno||'?')+')';});var _st='เริ่มต้น';</script>
+<script>
+(function(){
+  var ld=document.getElementById('ld'),started=false;
+  function msg(t){if(ld)ld.textContent=t;}
+  function go(r){
+    var code=r.code;window.__INIT=r.init||null;window.__IMG=r.img||null;window.__Q=r.q||null;window.__PAGE=r.page||'';window.__DISP=r.disp||null;
+    try{new Function(code);}catch(e){if(e instanceof SyntaxError){msg('SyntaxError ในโค้ดแอป: '+e.message);return;}}
+    var s=document.createElement('script');s.text=code;document.head.appendChild(s);
+    setTimeout(function(){if(!window.__ok)msg('โค้ดแอปไม่ทำงาน — ส่งภาพหน้าจอนี้มาให้ผม');},3000);
+  }
+  function readBoot(){ // โค้ดแอปและข้อมูลแรกที่เซิร์ฟเวอร์ฝังมากับหน้า (Base64 → JSON)
+    try{var s=window.__BOOT;if(!s||s==='__BOOT__')return null;var bin=atob(s),by=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)by[i]=bin.charCodeAt(i);var o=JSON.parse(new TextDecoder('utf-8').decode(by));return o&&o.code?o:null;}catch(e){return null;}
+  }
+  function boot(page){ // วิธีสำรอง: ขอโค้ดจากเซิร์ฟเวอร์
+    if(started)return;started=true;
+    msg('กำลังโหลด... (ดึงโค้ดแอป)');
+    google.script.run.withSuccessHandler(go).withFailureHandler(function(e){msg('ดึงโค้ดแอปไม่ได้: '+(e&&e.message?e.message:e));}).getBoot(page||'');
+  }
+  var b=readBoot();
+  if(b){started=true;go(b);}
+  else{
+    try{google.script.url.getLocation(function(l){boot(l&&l.parameter&&l.parameter.page);});}catch(e){boot('');}
+    setTimeout(function(){boot('');},1500);
+  }
+})();
+</script></body></html>
